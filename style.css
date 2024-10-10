@@ -74,7 +74,16 @@ body aside .section-title {
 }
 
 /* N'importe quelle balise avec la classe fluo */
+/*
+    "display" change le type d'affichage (par exemple bloc ou inline)
+    "inline-bloc" est un mélange des comportements de bloc et de inline-bloc
+    - on peut utliser les dimensions (comme pour un bloc)
+    - le bloc se dispose au sein du ttexte comme un inline
+*/
 .fluo {
+    display: inline-block;
     background-color: yellow;
     padding: 20px;
+    height: 50px;
+    width: 200px;
 }
