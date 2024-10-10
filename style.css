@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+    color: chocolate;
+}
+
+nav {
+    background-color: burlywood;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
