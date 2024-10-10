@@ -1,14 +1,80 @@
+/* Toutes les balises */
+* {
+    /* 
+    On demande au navigateur d'appliquer les dimensions width et height sur 
+    toute la zone de bordure.
+    En effet, par défaut elle s'appliquent à la zone de contenu.
+    */
+    box-sizing: border-box;
+}
+
+/* <body> */
 body {
+    /* couleur de fond */
     background-color: lightblue;
+    /* couleur du texte */
     color: chocolate;
+    /* Type de police */
+    font-family: sans-serif;
 }
 
 nav {
     background-color: burlywood;
 }
 
+/* N'importe quelle balise avec la class "section-title" */
+/*
+    Ce sélecteur plus spécifique que ".section-title"
+    Il sera donc prioritaire même s'il est écrit avant l'autre.
+
+    La spécifité est un score de 3 chiffres (centaines, dizaines, unités)
+    - Chaque apparition d'un id (#) ajoute 1 point de centaine
+    - Chaque appartion d'une class (.) ajout 1 point de dizaine
+    - Chaque apparition de nom de balise ajoute 1 point d'unité
+*/
+/* Spécificité: 012 */
+body aside .section-title {
+    /* Soulignement */
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+/* Spécificité: 010 */
 .section-title {
+    /* Taille de la police */
     font-size: 28px;
+    /* Graisse de la police */
     font-weight: bold;
-    margin-bottom: 20px;
+    /* Marge externe inférieure */
+    margin-bottom: 20px !important;
+}
+
+/* N'importe quelle balise avec la class "logo" */
+.logo {
+    background-color: blue;
+    /* paramétrage de la bordure */
+    border: 2px solid yellow;
+    /* hauteur du block */
+    height: 150px;
+    /* marge intérieure du block */
+    padding: 20px;
+    /* largeur du block */
+    width: 150px;
+}
+
+/* <div> qui est quelque part dans n'importe quelle balise avec la class "logo" */
+.logo div {
+    background-color: black;
+    border: 4px solid red;
+    /* 100% de la hauteur du plus proche ancêtre qui a une hauteur absolue */
+    height: 100%;
+    padding: 40px;
+    /* Alignement du texte au centre */
+    text-align: center;
+}
+
+/* N'importe quelle balise avec la classe fluo */
+.fluo {
+    background-color: yellow;
+    padding: 20px;
 }
